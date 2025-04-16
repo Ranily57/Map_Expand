@@ -1,119 +1,119 @@
-# Map Expand - Mod pour R.E.P.O.
+# Map Expand - Mod for R.E.P.O.
 
-Ce mod ajoute une vue élargie de la carte du jeu R.E.P.O.
+This mod adds an expanded view of the map in the game R.E.P.O.
 
-## Prérequis
+## Prerequisites
 
 - [R.E.P.O.](https://store.steampowered.com/app/3241660/REPO/)
 - [BepInEx 5.4.21](https://github.com/BepInEx/BepInEx/releases/tag/v5.4.21)
 
 ## Installation
 
-1. Téléchargez et installez BepInEx 5.4.21 dans votre dossier de jeu R.E.P.O.
-   - Utilisez le script `setup_bepinex.bat` pour l'installer automatiquement
-   - Ou extrayez manuellement le contenu de BepInEx dans le dossier principal du jeu où se trouve REPO.exe
-   - Lancez le jeu une fois pour que BepInEx crée ses dossiers de configuration
+1. Download and install BepInEx 5.4.21 in your R.E.P.O. game folder.
+    - Use the `setup_bepinex.bat` script for automatic installation
+    - Or manually extract the contents of BepInEx into the main game folder where REPO.exe is located
+    - Launch the game once to allow BepInEx to create its configuration folders
 
-2. Téléchargez la dernière version du mod depuis la page des releases
-   - Extrayez le fichier REPOMod.dll dans le dossier `BepInEx/plugins/`
-   - Ou compilez le mod vous-même avec `build.bat`
+2. Download the latest version of the mod from the releases page
+    - Extract the `REPOMod.dll` file into the `BepInEx/plugins/` folder
+    - Or compile the mod yourself using `build.bat`
 
-3. Lancez le jeu et profitez des nouvelles fonctionnalités!
+3. Launch the game and enjoy the new features!
 
-## Fonctionnalités
+## Features
 
-- **Vue Élargie de la Carte**: Augmente la taille de la caméra de la carte ("Dirt Finder Map Camera") à 5, permettant de voir une bien plus grande partie de la carte sans avoir à faire défiler autant.
-- Cette modification n'affecte que la caméra de la carte dans la scène principale du jeu.
+- **Expanded Map View**: Increases the size of the map camera ("Dirt Finder Map Camera") to 5, allowing you to see a much larger portion of the map without excessive scrolling.
+- This modification only affects the map camera in the main game scene.
 
 ## Configuration
 
-Après avoir lancé le jeu une fois avec le mod, un fichier de configuration est créé dans:
+After launching the game once with the mod, a configuration file is created at:
 `BepInEx/config/com.ranily.repo.mapexpand.cfg`
 
-Vous pouvez modifier les paramètres suivants:
-- `MapCamera.Size`: Taille de la caméra de la carte (défaut: 10, valeur du jeu: ~5)
+You can modify the following settings:
+- `MapCamera.Size`: Size of the map camera (default: 10, game value: ~5)
 
-## Ressources pour le développement
+## Development Resources
 
-### Outils essentiels à télécharger
-- [BepInEx 5.4.21](https://github.com/BepInEx/BepInEx/releases/tag/v5.4.21) - Framework de modding
-- [dnSpy](https://github.com/dnSpy/dnSpy/releases) ou [ILSpy](https://github.com/icsharpcode/ILSpy/releases) - Pour décompiler et explorer le code du jeu
-- [Unity Explorer](https://github.com/sinai-dev/UnityExplorer/releases) - Pour explorer les objets Unity pendant l'exécution du jeu
+### Essential Tools to Download
+- [BepInEx 5.4.21](https://github.com/BepInEx/BepInEx/releases/tag/v5.4.21) - Modding framework
+- [dnSpy](https://github.com/dnSpy/dnSpy/releases) or [ILSpy](https://github.com/icsharpcode/ILSpy/releases) - To decompile and explore the game's code
+- [Unity Explorer](https://github.com/sinai-dev/UnityExplorer/releases) - To explore Unity objects during runtime
 
-### Termes de recherche pour GitHub
-Pour trouver d'autres mods existants, recherchez:
+### GitHub Search Terms
+To find other existing mods, search for:
 - "REPO game mod"
 - "REPO BepInEx"
 - "R.E.P.O modding"
 
-### Communautés à rejoindre
-- [Discord officiel de R.E.P.O](https://discord.gg/semiwork) - Vérifiez s'il existe un canal dédié au modding
-- Recherchez des communautés sur Reddit ou Nexus Mods
+### Communities to Join
+- [Official R.E.P.O Discord](https://discord.gg/semiwork) - Check if there is a dedicated modding channel
+- Look for communities on Reddit or Nexus Mods
 
 ## Compilation
 
-Si vous souhaitez compiler le mod vous-même:
+If you want to compile the mod yourself:
 
-1. Assurez-vous d'avoir installé le SDK .NET 6.0 ou supérieur
-2. Clonez ce dépôt
-3. Modifiez le chemin du jeu dans build.bat si nécessaire
-4. Exécutez build.bat pour compiler le mod
-5. Le DLL compilé sera copié dans le dossier BepInEx du jeu
+1. Ensure you have installed the .NET 6.0 SDK or higher
+2. Clone this repository
+3. Modify the game path in `build.bat` if necessary
+4. Run `build.bat` to compile the mod
+5. The compiled DLL will be copied to the game's BepInEx folder
 
-## Dépannage
+## Troubleshooting
 
-- Si le mod ne se charge pas, vérifiez les fichiers logs dans `BepInEx/logs/`
-- Si la carte n'est pas agrandie après l'installation du mod:
-  - Appuyez sur F8 en jeu pour forcer l'agrandissement de la carte
-  - Vérifiez que la valeur `MapCamera.Size` dans le fichier de configuration n'est pas trop petite
-  - Vérifiez les logs pour voir si la caméra a été correctement identifiée
-- Assurez-vous que la version de BepInEx est compatible (5.4.21 recommandée)
+- If the mod does not load, check the log files in `BepInEx/logs/`
+- If the map is not expanded after installing the mod:
+  - Press F8 in-game to force the map expansion
+  - Check that the `MapCamera.Size` value in the configuration file is not too small
+  - Check the logs to see if the camera was correctly identified
+- Ensure the BepInEx version is compatible (5.4.21 recommended)
 
-## Configuration de l'environnement de développement
+## Development Environment Setup
 
-### Installation de BepInEx pour le développement
+### Installing BepInEx for Development
 
-1. **Téléchargez BepInEx 5.4.21**:
-   - Rendez-vous sur [la page des releases de BepInEx](https://github.com/BepInEx/BepInEx/releases/tag/v5.4.21)
-   - Téléchargez `BepInEx_x64_5.4.21.0.zip` pour les jeux Windows 64-bit
+1. **Download BepInEx 5.4.21**:
+    - Visit [the BepInEx releases page](https://github.com/BepInEx/BepInEx/releases/tag/v5.4.21)
+    - Download `BepInEx_x64_5.4.21.0.zip` for 64-bit Windows games
 
-2. **Installation dans le jeu**:
-   - Extrayez tout le contenu du ZIP dans le dossier principal du jeu R.E.P.O. (où se trouve REPO.exe)
-   - Lancez le jeu une fois puis fermez-le pour que BepInEx crée ses dossiers de configuration
+2. **Install in the Game**:
+    - Extract all contents of the ZIP into the main R.E.P.O. game folder (where REPO.exe is located)
+    - Launch the game once and close it to allow BepInEx to create its configuration folders
 
-3. **Configuration pour le développement**:
-   - Créez un dossier `libs` dans votre dossier de développement (`c:\Users\raphi\Downloads\Fullmap REPO\libs`)
-   - Copiez les fichiers suivants depuis le dossier d'installation de BepInEx vers votre dossier `libs`:
-     - `BepInEx/core/BepInEx.dll`
-     - `BepInEx/core/0Harmony.dll`
-     - `BepInEx/core/MonoMod.Utils.dll`
-     - `BepInEx/core/MonoMod.RuntimeDetour.dll`
+3. **Setup for Development**:
+    - Create a `libs` folder in your development directory (`c:\Users\raphi\Downloads\Fullmap REPO\libs`)
+    - Copy the following files from the BepInEx installation folder to your `libs` folder:
+      - `BepInEx/core/BepInEx.dll`
+      - `BepInEx/core/0Harmony.dll`
+      - `BepInEx/core/MonoMod.Utils.dll`
+      - `BepInEx/core/MonoMod.RuntimeDetour.dll`
 
-4. **Référencer les DLLs dans votre projet**:
-   - Ajoutez des références à ces DLLs dans votre fichier .csproj
-   - Votre fichier .csproj devrait déjà contenir ces références via les packages NuGet
+4. **Reference the DLLs in Your Project**:
+    - Add references to these DLLs in your `.csproj` file
+    - Your `.csproj` file should already include these references via NuGet packages
 
-### Organisation des fichiers
+### File Organization
 
-Structure recommandée pour votre projet:
+Recommended project structure:
 ```
 c:\Users\raphi\Downloads\Fullmap REPO\
-├── REPOMod.csproj          # Fichier projet
-├── build.bat               # Script de compilation
+├── REPOMod.csproj          # Project file
+├── build.bat               # Build script
 ├── README.md               # Documentation
-├── libs\                   # DLLs externes pour référence (si nécessaire)
-├── lib\                    # DLLs du jeu pour référence
+├── libs\                   # External DLLs for reference (if needed)
+├── lib\                    # Game DLLs for reference
 │   ├── Assembly-CSharp.dll
 │   ├── UnityEngine.dll
 │   └── UnityEngine.CoreModule.dll
-└── src\                    # Code source du mod
-    ├── Plugin.cs           # Point d'entrée du mod
-    ├── PluginInfo.cs       # Informations sur le mod
-    └── Utils\              # Classes utilitaires
-        └── GameExplorer.cs
+└── src\                    # Mod source code
+     ├── Plugin.cs           # Mod entry point
+     ├── PluginInfo.cs       # Mod information
+     └── Utils\              # Utility classes
+          └── GameExplorer.cs
 ```
 
-## Crédits
+## Credits
 
-- Développé par Ranily
-- Basé sur le jeu R.E.P.O. par semiwork
+- Developed by Ranily
+- Based on the game R.E.P.O. by semiwork
